@@ -12,6 +12,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     Button b_plus,b_minus,b_multy,b_divide,b_equal;
     TextView tv_result;
     int result;
+    CalcService service = new CalcServiceImpl();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +37,16 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         int num1 = integer.parseint(et_num_1.getText().toString());
         int num2 = integer.parseint(et_num_2.getText().toString());
+        cal.setNum1(num1);
+        cal.setNum2(num2);
         switch (v.getId()){
             case R.id.b_divide :
+
                 result = num1/num2;
                 break;
             case R.id.b_minus :
-                result = num1-num2;
+                cal = service.minus(cal);
+                result = cal.getResult();
                 break;
             case R.id.b_multy :
                 result = num1*num2;
