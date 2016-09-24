@@ -12,6 +12,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     Button b_plus,b_minus,b_multy,b_divide,b_equal;
     TextView tv_result;
     int result;
+    CalcDTO cal = new CalcDTO();
     CalcService service = new CalcServiceImpl();
 
     @Override
@@ -35,8 +36,9 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        int num1 = integer.parseint(et_num_1.getText().toString());
-        int num2 = integer.parseint(et_num_2.getText().toString());
+        int num1 = Integer.parseInt(et_num_1.getText().toString());
+        int num2 = Integer.parseInt(et_num_2.getText().toString());
+
         cal.setNum1(num1);
         cal.setNum2(num2);
         switch (v.getId()){
