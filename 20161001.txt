@@ -1,0 +1,27 @@
+Button bt_login,bt_join;
+EditText et_id,et_pw;
+
+
+git add --all
+git commit -m "commit 18:31"
+git push -u origin master
+
+
+폰과 연결하기
+\
+
+C\사용자\1027\AppData\local\Android\sdk\platform-tools\adb.exe
+
+찾아놓고, cmd 열기
+adb 쳐서 안되는걸 확인하기
+
+win+Break -> 시스템 속성- > 환경변수 (JAVA_HOME 확인, Path 찾기)
+
+
+SQLITE 명령어
+
+adb devices
+adb shell
+cd /data/data/com.example.a1027.hyunwoolee/
+
+(애플 앱 개발 위해서는 유닉스 문법)

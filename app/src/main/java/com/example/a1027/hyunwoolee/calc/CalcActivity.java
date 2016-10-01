@@ -1,4 +1,4 @@
-package com.example.a1027.hyunwoolee;
+package com.example.a1027.hyunwoolee.calc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.a1027.hyunwoolee.R;
 
 public class CalcActivity extends AppCompatActivity implements View.OnClickListener {
     EditText et_num_1,et_num_2;

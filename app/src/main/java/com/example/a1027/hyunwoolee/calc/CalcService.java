@@ -1,4 +1,4 @@
-package com.example.a1027.hyunwoolee;
+package com.example.a1027.hyunwoolee.calc;
 
 /**
  * Created by 1027 on 2016-09-24.
