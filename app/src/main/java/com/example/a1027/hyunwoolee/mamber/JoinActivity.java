@@ -52,17 +52,8 @@ public class JoinActivity extends AppCompatActivity implements View.OnClickListe
         member.setPhone(phone);
         switch (v.getId()){
             case R.id.bt_submit:
-                Retval val = service.join(member);
-                if(val.getMessage().equals("SUCCESS")){
-                    Toast.makeText(JoinActivity.this,
-                            "회원가입 성공. 로그인 바랍니다.",
-                            Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(JoinActivity.this, LoginActivity.class));
-                }else {
-                    Toast.makeText(JoinActivity.this,
-                            "회원가입 실패. 재시도 바랍니다.",
-                            Toast.LENGTH_LONG).show();
-                                    }
+                service.regist(member);
+                startActivity(new Intent(JoinActivity.this,LoginActivity.class));
                 break;
             case R.id.bt_cancel:
                 startActivity(new Intent(JoinActivity.this,MainActivity.class));

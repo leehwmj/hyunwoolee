@@ -1,0 +1,35 @@
+
+
+adb shell
+cd /data/data/com.example.a1027.hyunwoolee
+sqlite3 ./hanbitdb
+
+
+웹서비스 완성 조건
+www
+web server
+db server
+
+앱서비스(안드로이드) 완성 조건
+lte, wifi
+android -> Java + xml
+sqlite3 -> sql(structured query language)
+
+
+sql
+
+DDL
+DML
+DCL
+
+DDL(정의어)
+- create table
+- drop table
+
+DML(조작어)
+4가지 형태로 패턴화 되어있음
+CRUD
+-create => insert into
+-read => select from
+-update => update set
+-delete => delete from

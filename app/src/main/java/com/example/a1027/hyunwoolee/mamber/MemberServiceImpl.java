@@ -5,6 +5,8 @@ import android.util.Log;
 
 import com.example.a1027.hyunwoolee.util.Retval;
 
+import java.util.ArrayList;
+
 /**
  * Created by 1027 on 2016-10-01.
  */
@@ -17,33 +19,37 @@ public class MemberServiceImpl implements MemberService{
     }
 
     @Override
-    public MemberDTO login(MemberDTO param) {
-        Log.i("==== SERVICE에서 받은 ID값 :",param.getId());
-        Log.i("==== SERVICE에서 받은 pw값 :",param.getPw());
-
-        MemberDTO member = new MemberDTO();
-        member = dao.select(param);
-        if(member==null){
-            member.setId("NONE");
-
-            return member;
-        }else if(member.getPw().equals(param.getPw())){
-            member.setId("NO_MATCH");
-            return member;
-        }else{
-            return member;
-        }
+    public void regist(MemberDTO member) {
 
     }
 
     @Override
-    public Retval join(MemberDTO param) {
-        Log.i(" SERVICE에서 받은 ID값 :",param.getId());
-        Log.i(" SERVICE에서 받은 pw값 :",param.getPw());
-        Log.i(" SERVICE에서 받은 name :",param.getName());
-        Log.i(" SERVICE에서 받은 addr :",param.getAddr());
-        Log.i(" SERVICE에서 받은 phone :",param.getPhone());
-        Log.i(" SERVICE에서 받은 email :",param.getEmail());
-        return dao.insert(param);
+    public ArrayList<MemberDTO> getList(MemberDTO member) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<MemberDTO> getListByName(MemberDTO member) {
+        return null;
+    }
+
+    @Override
+    public MemberDTO getOne(MemberDTO member) {
+        return dao.selectOne(member);
+    }
+
+    @Override
+    public int count() {
+        return dao.count();
+    }
+
+    @Override
+    public void update(MemberDTO member) {
+        dao.update(member);
+    }
+
+    @Override
+    public void unregist(MemberDTO member) {
+        dao.delete(member);
     }
 }

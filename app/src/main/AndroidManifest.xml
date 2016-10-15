@@ -25,7 +25,8 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".mamber.LoginActivity" />
-        <activity android:name=".mamber.JoinActivity"></activity>
+        <activity android:name=".mamber.JoinActivity" />
+        <activity android:name=".mamber.ListActivity"></activity>
     </application>
 
 </manifest>
