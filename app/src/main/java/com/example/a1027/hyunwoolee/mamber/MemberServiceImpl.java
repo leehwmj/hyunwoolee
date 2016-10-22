@@ -20,12 +20,12 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public void regist(MemberDTO member) {
-
+        dao.insert(member);
     }
 
     @Override
-    public ArrayList<MemberDTO> getList(MemberDTO member) {
-        return null;
+    public ArrayList<MemberDTO> getList() {
+        return dao.selectList();
     }
 
     @Override
@@ -49,7 +49,7 @@ public class MemberServiceImpl implements MemberService{
     }
 
     @Override
-    public void unregist(MemberDTO member) {
-        dao.delete(member);
+    public void unregist(String id) {
+        dao.delete(id);
     }
 }

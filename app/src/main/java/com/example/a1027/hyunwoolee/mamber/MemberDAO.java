@@ -91,7 +91,7 @@ public void insert(MemberDTO param){
     public ArrayList<MemberDTO> selectList(){
         Log.i("====== DAO 전체조회 :","selectList() 진입");
         String sql = "select "
-                + String.format("%s,%s,%s,%s,%s,%s,%s,%s",ID,PW,NAME,EMAIL,ADDR,PHONE,PHOTO)
+                + String.format("%s,%s,%s,%s,%s,%s,%s",ID,PW,NAME,EMAIL,ADDR,PHONE,PHOTO)
             +" from member;";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql,null);
@@ -190,7 +190,7 @@ public void update(MemberDTO param){
     db.close();
 }
 // DML (DELETE(delete))
-    public void delete(MemberDTO param){
+    public void delete(String id){
         MemberDTO member = new MemberDTO();
     }
 

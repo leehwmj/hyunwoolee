@@ -12,13 +12,13 @@ public interface MemberService {
     // CREATE
     public void regist(MemberDTO member);
     //READ
-    public ArrayList <MemberDTO> getList(MemberDTO member);
+    public ArrayList <MemberDTO> getList();
     public ArrayList <MemberDTO> getListByName(MemberDTO member);
     public MemberDTO getOne(MemberDTO member);
     public int count();
     //UPDATE
     public void update(MemberDTO member);
     //DELETE
-    public void unregist(MemberDTO member);
+    public void unregist(String id);
     //추상메소드들임
 }
