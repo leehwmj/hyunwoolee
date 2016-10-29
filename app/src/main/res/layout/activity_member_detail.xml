@@ -106,35 +106,38 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:id="@+id/bt_call"
-        android:text="전화하기"
+        android:text="CALL"
         android:textSize="30dp"
         />
-    />
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/bt_map"
-            android:text="위치보기"
+            android:text="MAP"
             android:textSize="30dp"
             />
-    </LinearLayout>
+    />
+</LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:id="@+id/bt_update"
-            android:text="정보수정"
+            android:text="UPDATE"
+            android:textSize="30dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_list"
+            android:text="LIST"
             android:textSize="30dp"
             />
         />
@@ -144,12 +147,21 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:id="@+id/bt_list"
-            android:text="목록으로"
+            android:id="@+id/bt_email"
+            android:text="EMAIL"
             android:textSize="30dp"
             />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_message"
+            android:text="MESSAGE"
+            android:textSize="30dp"
+            />
+        />
     </LinearLayout>
+
 
 </LinearLayout>

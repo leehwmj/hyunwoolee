@@ -11,13 +11,15 @@ import com.example.a1027.hyunwoolee.util.Retval;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.a1027.hyunwoolee.util.Constants.DB_NAME;
+import static com.example.a1027.hyunwoolee.util.Constants.DB_VERSION;
+
 /**
  * Created by 1027 on 2016-10-01.
  */
 
 public class MemberDAO extends SQLiteOpenHelper {
-    public static final String DB_NAME = "hanbit.db";
-    public static final int DB_VERSION = 1;
+
     public static final String ID = "id";
     public static final String PW ="pw";
     public static final String NAME = "name";
@@ -67,7 +69,18 @@ public class MemberDAO extends SQLiteOpenHelper {
                         +"values"
                         +"('hong5','1','hongohdong','hong5@gmail.com','37.5597680,126.9423080','010-9307-1297','default.jpg')"
         );
-
+ /*       db.execSQL("create table if not exists message("
+                + "_id INTEGER PRIMARY KEY AUTOINCREMEMT,"
+                + "receiver text,"
+                + "content text,"
+                + "send_date text,"
+                + "id text,"
+                + "FOREIGN KEY (id) REFERENCES member(id));");
+        db.execSQL(
+                "insert into message(receiver,content,send_date,id)"
+                        +"values"
+                        +"('hong2','Hi Thanks a lot','2016-10-30 13:17','hong1')"
+        ); */
     }
 
     @Override
